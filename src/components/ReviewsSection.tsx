@@ -103,7 +103,7 @@ const ReviewsSection = () => {
           {visibleReviews.map((review, index) => (
             <Card 
               key={review.id} 
-              className={`card-3d reveal ${index < 2 ? 'visible' : ''} shadow-card hover:shadow-card-hover`}
+              className={`card-3d reveal ${showAll || index < 2 ? 'visible' : ''} shadow-card hover:shadow-card-hover animate-fade-in`}
             >
               <CardContent className="p-6">
                 <div className="mb-4">
