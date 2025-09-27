@@ -62,7 +62,7 @@ const Header = () => {
                 aria-label="Call Car Repair Mobile Mechanic Birmingham at +44 7311 345533"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us
+                Call Now
               </a>
             </Button>
 

@@ -178,7 +178,7 @@ const Services = () => {
                           >
                             <a href="tel:+447311345533">
                               <Phone className="w-4 h-4 mr-2" />
-                              Call
+                              Call Now
                             </a>
                           </Button>
                         </div>

@@ -33,6 +33,36 @@ const reviews = [
     text: "I was buying a used car and wanted to get it checked before the purchase. I called these guys and he was very helpful, at a reasonable price he checked the whole car very thoroughly. He was also very sweet and polite.",
     author: "L. Brown",
     rating: 5
+  },
+  {
+    id: 6,
+    text: "Excellent service! Quick to respond and very professional. Fixed my car's electrical issue in no time. Highly recommend for anyone looking for reliable mobile mechanic services in Birmingham.",
+    author: "R. Johnson",
+    rating: 5
+  },
+  {
+    id: 7,
+    text: "Outstanding work on my vehicle's brake system. Ade was punctual, knowledgeable, and provided excellent value for money. Will definitely use this service again.",
+    author: "K. Williams",
+    rating: 5
+  },
+  {
+    id: 8,
+    text: "Great mobile mechanic service! Saved me a lot of time by coming to my location. Professional diagnostic work and fair pricing. Couldn't be happier with the service.",
+    author: "T. Davis",
+    rating: 5
+  },
+  {
+    id: 9,
+    text: "Fast, reliable, and honest service. Ade identified the problem quickly and explained everything clearly. The repair was done efficiently and at a reasonable cost.",
+    author: "P. Miller",
+    rating: 5
+  },
+  {
+    id: 10,
+    text: "Top-notch mobile mechanic! Responded immediately to my emergency call and had my car running perfectly within the hour. Professional and courteous service.",
+    author: "A. Garcia",
+    rating: 5
   }
 ];
 

@@ -136,7 +136,7 @@ const Home = () => {
               >
                 <a href="tel:+447311345533">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call +44 7311 345533
+                  Call Now
                 </a>
               </Button>
             </div>
@@ -279,10 +279,10 @@ const Home = () => {
               className="btn-large border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               asChild
             >
-              <a href="tel:+447311345533">
-                <Phone className="w-5 h-5 mr-2" />
-                Quick Call
-              </a>
+                <a href="tel:+447311345533">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now
+                </a>
             </Button>
           </div>
         </div>
