@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -23,14 +23,6 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 mt-1 text-primary-foreground/60" />
-                <div className="text-sm text-primary-foreground/80">
-                  4, Southdown Avenue<br />
-                  Birmingham B18 5LG<br />
-                  United Kingdom
-                </div>
-              </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary-foreground/60" />
                 <a 
@@ -43,10 +35,10 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary-foreground/60" />
                 <a 
-                  href="mailto:contact@crmmb.co.uk" 
+                  href="mailto:semiosho111@gmail.com" 
                   className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
-                  contact@crmmb.co.uk
+                  semiosho111@gmail.com
                 </a>
               </div>
             </div>

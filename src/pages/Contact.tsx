@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import Layout from '@/components/Layout';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,9 +34,21 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Here you would normally send the data to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Send email using Supabase edge function
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          preferredDate: formData.preferredDate,
+          preferredTime: formData.preferredTime,
+        },
+      });
+
+      if (error) {
+        throw error;
+      }
       
       toast({
         title: "Message sent successfully!",
@@ -52,6 +65,7 @@ const Contact = () => {
         preferredTime: ''
       });
     } catch (error) {
+      console.error('Error sending email:', error);
       toast({
         variant: "destructive",
         title: "Error sending message",
@@ -246,23 +260,11 @@ const Contact = () => {
                         <div>
                           <h4 className="font-semibold text-foreground">Email</h4>
                           <a 
-                            href="mailto:contact@crmmb.co.uk"
+                            href="mailto:semiosho111@gmail.com"
                             className="text-primary hover:text-primary-hover transition-colors"
                           >
-                            contact@crmmb.co.uk
+                            semiosho111@gmail.com
                           </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <MapPin className="w-6 h-6 text-primary mt-1" />
-                        <div>
-                          <h4 className="font-semibold text-foreground">Address</h4>
-                          <p className="text-muted-foreground">
-                            4, Southdown Avenue<br />
-                            Birmingham B18 5LG<br />
-                            United Kingdom
-                          </p>
                         </div>
                       </div>
 
@@ -307,22 +309,6 @@ const Contact = () => {
                           We accept cash, bank transfers, and most major payment methods for your convenience.
                         </p>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Map placeholder */}
-                <Card className="shadow-card">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-6 font-dm-sans">
-                      Find Us
-                    </h3>
-                    <div className="bg-muted rounded-lg p-12 text-center">
-                      <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-                      <p className="text-muted-foreground">Interactive Map Coming Soon</p>
-                      <p className="text-sm text-muted-foreground mt-2">
-                        4, Southdown Avenue, Birmingham B18 5LG
-                      </p>
                     </div>
                   </CardContent>
                 </Card>

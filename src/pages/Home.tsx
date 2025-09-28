@@ -1,10 +1,10 @@
-import { Star, MapPin, Phone, Calendar, Wrench, Settings, Zap, Wind, Car, Battery, Workflow, Cog, CheckCircle } from 'lucide-react';
+import { Star, Phone, Calendar, Wrench, Settings, Zap, Wind, Car, Battery, Workflow, Cog, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import ReviewsSection from '@/components/ReviewsSection';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/hero-mechanic.jpg';
+import heroImage from '@/assets/hero-mechanic-black.jpg';
 import carServicingImage from '@/assets/car-servicing.jpg';
 import diagnosticsImage from '@/assets/diagnostics.jpg';
 import brakeRepairImage from '@/assets/brake-repair.jpg';
@@ -131,7 +131,7 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="btn-large border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              className="btn-large border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground bg-transparent"
                 asChild
               >
                 <a href="tel:+447311345533">
@@ -146,45 +146,6 @@ const Home = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-8 h-12 border-2 border-primary-foreground/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-primary-foreground/50 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xl text-foreground leading-relaxed mb-8">
-              Car Repair Mobile Mechanic Birmingham offers convenient and efficient automotive services right at your doorstep.
-            </p>
-            
-            <div className="bg-card p-6 rounded-xl shadow-card mb-8">
-              <div className="flex items-start gap-4 mb-4">
-                <MapPin className="w-6 h-6 text-primary mt-1" />
-                <div className="text-left">
-                  <h3 className="font-semibold text-foreground mb-2">Visit Us</h3>
-                  <p className="text-muted-foreground">
-                    4, Southdown Avenue<br />
-                    Birmingham B18 5LG<br />
-                    United Kingdom
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <Calendar className="w-6 h-6 text-primary" />
-                <div className="text-left">
-                  <h3 className="font-semibold text-foreground mb-2">Opening Hours</h3>
-                  <p className="text-muted-foreground">Mon-Fri: 8:30am – 11:00pm</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Embedded Map Placeholder */}
-            <div className="bg-muted rounded-xl p-8 text-center">
-              <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-              <p className="text-muted-foreground">Interactive Map Coming Soon</p>
-            </div>
           </div>
         </div>
       </section>
@@ -276,7 +237,7 @@ const Home = () => {
             <Button
               variant="outline"
               size="lg"
-              className="btn-large border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              className="btn-large border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground bg-transparent"
               asChild
             >
                 <a href="tel:+447311345533">

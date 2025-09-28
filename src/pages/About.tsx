@@ -1,8 +1,8 @@
-import { Phone, Mail, MapPin, Star, Award, Clock, Users } from 'lucide-react';
+import { Phone, Mail, Star, Award, Clock, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Layout from '@/components/Layout';
-import heroImage from '@/assets/hero-mechanic.jpg';
+import heroImage from '@/assets/hero-mechanic-black.jpg';
 import carServicingImage from '@/assets/car-servicing.jpg';
 
 const About = () => {
@@ -74,7 +74,7 @@ const About = () => {
 
                 <Card className="text-center shadow-card hover:shadow-card-hover transition-all duration-300">
                   <CardContent className="p-6">
-                    <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
+                    <Users className="w-12 h-12 text-primary mx-auto mb-4" />
                     <h3 className="font-semibold text-foreground mb-2">Mobile Service</h3>
                     <p className="text-sm text-muted-foreground">We come to your location</p>
                   </CardContent>
@@ -154,25 +154,21 @@ const About = () => {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="btn-large border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                    className="btn-large border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground bg-transparent"
                     asChild
                   >
-                    <a href="mailto:contact@crmmb.co.uk">
+                    <a href="mailto:semiosho111@gmail.com">
                       <Mail className="w-5 h-5 mr-2" />
-                      Email: contact@crmmb.co.uk
+                      Email: semiosho111@gmail.com
                     </a>
                   </Button>
                 </div>
 
                 <div className="bg-primary-foreground/10 rounded-xl p-6">
-                  <h3 className="font-semibold text-lg mb-4">Our Location</h3>
-                  <div className="flex items-start gap-3 justify-center">
-                    <MapPin className="w-5 h-5 mt-1" />
-                    <div className="text-left">
-                      4, Southdown Avenue<br />
-                      Birmingham B18 5LG<br />
-                      United Kingdom
-                    </div>
+                  <h3 className="font-semibold text-lg mb-4">Opening Hours</h3>
+                  <div className="flex items-center gap-3 justify-center">
+                    <Clock className="w-5 h-5" />
+                    <div>Mon-Fri: 8:30am – 11:00pm</div>
                   </div>
                 </div>
               </div>
