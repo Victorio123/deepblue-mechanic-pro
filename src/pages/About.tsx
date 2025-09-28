@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Layout from '@/components/Layout';
 import heroImage from '@/assets/hero-mechanic-black.jpg';
-import carServicingImage from '@/assets/car-servicing.jpg';
+import carServicingImage from '@/assets/car-servicing-black.jpg';
 
 const About = () => {
   return (

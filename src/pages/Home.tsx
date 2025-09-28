@@ -5,10 +5,10 @@ import ReviewsSection from '@/components/ReviewsSection';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-mechanic-black.jpg';
-import carServicingImage from '@/assets/car-servicing.jpg';
-import diagnosticsImage from '@/assets/diagnostics.jpg';
-import brakeRepairImage from '@/assets/brake-repair.jpg';
-import batteryReplacementImage from '@/assets/battery-replacement.jpg';
+import carServicingImage from '@/assets/car-servicing-black.jpg';
+import diagnosticsImage from '@/assets/diagnostics-black.jpg';
+import brakeRepairImage from '@/assets/brake-repair-black.jpg';
+import batteryReplacementImage from '@/assets/battery-replacement-black.jpg';
 
 const services = [
   {
