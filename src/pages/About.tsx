@@ -8,9 +8,9 @@ import carServicingImage from '@/assets/car-servicing-realistic.jpg';
 const About = () => {
   return (
     <Layout>
-      <div className="min-h-screen animate-fade-in">
+      <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative py-24 bg-hero-gradient overflow-hidden animate-fade-in">
+        <section className="relative py-24 bg-hero-gradient overflow-hidden">
           <div className="absolute inset-0">
             <img 
               src={heroImage} 
@@ -34,7 +34,7 @@ const About = () => {
         </section>
 
         {/* Main Content */}
-        <section className="py-16 bg-background animate-fade-in">
+        <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="prose prose-lg max-w-none mb-12">
@@ -47,7 +47,7 @@ const About = () => {
               </div>
 
               {/* Features Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 animate-fade-in">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                 <Card className="text-center shadow-card hover:shadow-card-hover transition-all duration-300">
                   <CardContent className="p-6">
                     <Award className="w-12 h-12 text-primary mx-auto mb-4" />

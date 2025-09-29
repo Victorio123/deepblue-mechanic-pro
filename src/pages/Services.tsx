@@ -129,9 +129,9 @@ const services = [
 const Services = () => {
   return (
     <Layout>
-      <div className="min-h-screen animate-fade-in">
+      <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-24 bg-hero-gradient text-primary-foreground animate-fade-in">
+        <section className="py-24 bg-hero-gradient text-primary-foreground">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-dm-sans">
@@ -151,11 +151,7 @@ const Services = () => {
               {services.map((service, index) => (
                 <Card 
                   key={service.id} 
-                  className="card-3d shadow-card hover:shadow-card-hover animate-fade-in opacity-0"
-                  style={{
-                    animationDelay: `${index * 0.1}s`,
-                    animationFillMode: 'forwards'
-                  }}
+                  className="card-3d shadow-card hover:shadow-card-hover"
                 >
                   <CardContent className="p-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 h-full">
@@ -226,7 +222,7 @@ const Services = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-primary text-primary-foreground animate-fade-in">
+        <section className="py-16 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 font-dm-sans">
               Need a Service Not Listed?

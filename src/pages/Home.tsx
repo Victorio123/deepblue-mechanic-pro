@@ -85,9 +85,9 @@ const StarRating = ({ rating }: { rating: number }) => (
 const Home = () => {
   return (
     <Layout>
-      <div className="min-h-screen animate-fade-in">{/* Remove pt-16 lg:pt-20 since Layout handles it */}
+      <div className="min-h-screen">{/* Remove pt-16 lg:pt-20 since Layout handles it */}
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-hero-gradient overflow-hidden animate-fade-in">
+      <section className="relative min-h-screen flex items-center bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroImage} 
@@ -151,7 +151,7 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-16 bg-muted/30 animate-fade-in">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 font-dm-sans">
@@ -163,15 +163,8 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {services.slice(0, 8).map((service, index) => (
-              <Card 
-                key={service.id} 
-                className="card-3d shadow-card hover:shadow-card-hover animate-fade-in opacity-0"
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                  animationFillMode: 'forwards'
-                }}
-              >
+            {services.slice(0, 8).map((service) => (
+              <Card key={service.id} className="card-3d shadow-card hover:shadow-card-hover">
                 <CardContent className="p-6 text-center">
                   <div className="relative mb-4 overflow-hidden rounded-lg">
                     <img 
@@ -200,7 +193,7 @@ const Home = () => {
       </section>
 
       {/* About Snippet */}
-      <section className="py-16 bg-background animate-fade-in">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 font-dm-sans">
