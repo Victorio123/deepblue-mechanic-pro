@@ -37,14 +37,14 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">C</span>
+              <span className="text-primary-foreground font-bold text-lg">AD</span>
             </div>
             <div>
               <span className="text-xl lg:text-2xl font-bold text-foreground font-dm-sans">
-                CRMMB
+                AD
               </span>
               <div className="hidden sm:block text-xs text-muted-foreground">
-                Mobile Mechanic Birmingham
+                Ade Automobile
               </div>
             </div>
           </Link>
@@ -59,7 +59,7 @@ const Header = () => {
             >
               <a 
                 href="tel:+447311345533"
-                aria-label="Call Car Repair Mobile Mechanic Birmingham at +44 7311 345533"
+                aria-label="Call Ade Automobile at +44 7311 345533"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now

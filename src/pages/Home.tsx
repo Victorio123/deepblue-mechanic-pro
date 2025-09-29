@@ -4,11 +4,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import ReviewsSection from '@/components/ReviewsSection';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/hero-mechanic-black.jpg';
-import carServicingImage from '@/assets/car-servicing-black.jpg';
-import diagnosticsImage from '@/assets/diagnostics-black.jpg';
-import brakeRepairImage from '@/assets/brake-repair-black.jpg';
-import batteryReplacementImage from '@/assets/battery-replacement-black.jpg';
+import heroImage from '@/assets/hero-mechanic-realistic.jpg';
+import carServicingImage from '@/assets/car-servicing-realistic.jpg';
+import diagnosticsImage from '@/assets/diagnostics-realistic.jpg';
+import brakeRepairImage from '@/assets/brake-repair-realistic.jpg';
+import batteryReplacementImage from '@/assets/battery-replacement-realistic.jpg';
 
 const services = [
   {
@@ -85,9 +85,9 @@ const StarRating = ({ rating }: { rating: number }) => (
 const Home = () => {
   return (
     <Layout>
-      <div className="min-h-screen">{/* Remove pt-16 lg:pt-20 since Layout handles it */}
+      <div className="min-h-screen animate-fade-in">{/* Remove pt-16 lg:pt-20 since Layout handles it */}
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-hero-gradient overflow-hidden">
+      <section className="relative min-h-screen flex items-center bg-hero-gradient overflow-hidden animate-fade-in">
         <div className="absolute inset-0">
           <img 
             src={heroImage} 
@@ -109,11 +109,11 @@ const Home = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground mb-6 font-dm-sans leading-tight">
-              Car Repair Mobile Mechanic Birmingham
+              Ade Automobile
             </h1>
             
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
-              Car Repair Mobile Mechanic Birmingham offers convenient and efficient automotive services right at your doorstep.
+              Ade Automobile offers convenient and efficient automotive services right at your doorstep.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -151,7 +151,7 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30 animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 font-dm-sans">
@@ -163,8 +163,15 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {services.slice(0, 8).map((service) => (
-              <Card key={service.id} className="card-3d shadow-card hover:shadow-card-hover">
+            {services.slice(0, 8).map((service, index) => (
+              <Card 
+                key={service.id} 
+                className="card-3d shadow-card hover:shadow-card-hover animate-fade-in opacity-0"
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                  animationFillMode: 'forwards'
+                }}
+              >
                 <CardContent className="p-6 text-center">
                   <div className="relative mb-4 overflow-hidden rounded-lg">
                     <img 
@@ -193,14 +200,14 @@ const Home = () => {
       </section>
 
       {/* About Snippet */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 font-dm-sans">
-              Why Choose CRMMB?
+              Why Choose Ade Automobile?
             </h2>
             <p className="text-xl text-foreground leading-relaxed mb-8">
-              Car Repair Mobile Mechanic Birmingham is one of the highest rated independent garages in Birmingham. Book online for an MOT, service or repair now!
+              Ade Automobile is one of the highest rated independent garages in Birmingham. Book online for an MOT, service or repair now!
             </p>
             <Button variant="outline" size="lg" className="btn-large" asChild>
               <Link to="/about">

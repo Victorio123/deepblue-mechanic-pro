@@ -1,12 +1,15 @@
-import { Phone, Calendar, Car, Wrench, Settings, Wind, CheckCircle, Battery, Workflow, Cog, Zap, Hammer } from 'lucide-react';
+import { Phone, Calendar, Car, Wrench, Settings, Wind, CheckCircle, Battery, Workflow, Cog, Zap, Hammer, ShieldCheck, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
-import carServicingImage from '@/assets/car-servicing.jpg';
-import diagnosticsImage from '@/assets/diagnostics.jpg';
-import brakeRepairImage from '@/assets/brake-repair.jpg';
-import batteryReplacementImage from '@/assets/battery-replacement.jpg';
+import carServicingImage from '@/assets/car-servicing-realistic.jpg';
+import diagnosticsImage from '@/assets/diagnostics-realistic.jpg';
+import brakeRepairImage from '@/assets/brake-repair-realistic.jpg';
+import batteryReplacementImage from '@/assets/battery-replacement-realistic.jpg';
+import bodyworkImage from '@/assets/bodywork-realistic.jpg';
+import windscreenImage from '@/assets/windscreen-realistic.jpg';
+import inspectionImage from '@/assets/inspection-realistic.jpg';
 
 const services = [
   {
@@ -75,43 +78,67 @@ const services = [
   },
   {
     id: 9,
-    name: 'Brakes',
-    description: 'Specialized brake system services including emergency brake repair, ABS diagnostics, and complete brake system overhauls.',
-    icon: CheckCircle,
-    image: brakeRepairImage,
-    features: ['Emergency repairs', 'ABS diagnostics', 'System overhauls', '24/7 availability']
+    name: 'Body work',
+    description: 'Professional automotive body work including dent repair, scratch removal, panel beating, and paint work to restore your vehicle\'s appearance.',
+    icon: Hammer,
+    image: bodyworkImage,
+    features: ['Dent repair', 'Scratch removal', 'Panel beating', 'Paint restoration']
   },
   {
     id: 10,
+    name: 'Windscreen replacement',
+    description: 'Professional windscreen and glass replacement services using quality glass with proper sealing and safety standards.',
+    icon: ShieldCheck,
+    image: windscreenImage,
+    features: ['Windscreen replacement', 'Side window repair', 'Quality glass', 'Insurance claims']
+  },
+  {
+    id: 11,
+    name: 'Buying and selling of cars',
+    description: 'Car trading services including vehicle sourcing, quality inspection, fair pricing, and complete documentation handling.',
+    icon: ShoppingCart,
+    image: carServicingImage,
+    features: ['Vehicle sourcing', 'Fair pricing', 'Quality assured', 'Full documentation']
+  },
+  {
+    id: 12,
+    name: 'Vehicle inspection before purchase',
+    description: 'Comprehensive pre-purchase vehicle inspection to identify potential issues and ensure you make an informed buying decision.',
+    icon: CheckCircle,
+    image: inspectionImage,
+    features: ['Comprehensive inspection', 'Detailed report', 'Expert advice', 'Peace of mind']
+  },
+  {
+    id: 13,
+    name: 'Brake disc replacement of all cars',
+    description: 'Specialized brake disc replacement service for all vehicle makes and models, ensuring optimal braking performance and safety.',
+    icon: Settings,
+    image: brakeRepairImage,
+    features: ['All makes & models', 'Quality discs', 'Professional fitting', 'Safety guaranteed']
+  },
+  {
+    id: 14,
     name: 'Electrical repair',
     description: 'Automotive electrical system diagnosis and repair including alternator, starter motor, wiring, and electronic component repairs.',
     icon: Zap,
     image: diagnosticsImage,
     features: ['Alternator repair', 'Starter motor service', 'Wiring repairs', 'Electronic diagnostics']
-  },
-  {
-    id: 11,
-    name: 'General repairs and maintenance',
-    description: 'Comprehensive automotive care covering all aspects of vehicle maintenance and repair. Your one-stop solution for automotive needs.',
-    icon: Hammer,
-    image: carServicingImage,
-    features: ['All repairs covered', 'Maintenance plans', 'Quality parts', 'Expert service']
   }
 ];
 
 const Services = () => {
   return (
     <Layout>
-      <div className="min-h-screen">
+      <div className="min-h-screen animate-fade-in">
         {/* Hero Section */}
-        <section className="py-24 bg-hero-gradient text-primary-foreground">
+        <section className="py-24 bg-hero-gradient text-primary-foreground animate-fade-in">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-dm-sans">
                 Our Services
               </h1>
               <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
-                Car Repair Mobile Mechanic Birmingham offers these services
+                Ade Automobile offers these services
               </p>
             </div>
           </div>
@@ -121,14 +148,21 @@ const Services = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {services.map((service) => (
-                <Card key={service.id} className="card-3d shadow-card hover:shadow-card-hover">
+              {services.map((service, index) => (
+                <Card 
+                  key={service.id} 
+                  className="card-3d shadow-card hover:shadow-card-hover animate-fade-in opacity-0"
+                  style={{
+                    animationDelay: `${index * 0.1}s`,
+                    animationFillMode: 'forwards'
+                  }}
+                >
                   <CardContent className="p-0">
                     <div className="grid grid-cols-1 md:grid-cols-2 h-full">
                       <div className="relative overflow-hidden rounded-l-lg">
                         <img 
                           src={service.image} 
-                          alt={service.name}
+                          alt={`${service.name} - Professional automotive service by Ade Automobile`}
                           className="w-full h-64 md:h-full object-cover transition-transform duration-300 hover:scale-110"
                           loading="lazy"
                         />
@@ -192,7 +226,7 @@ const Services = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-primary text-primary-foreground">
+        <section className="py-16 bg-primary text-primary-foreground animate-fade-in">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 font-dm-sans">
               Need a Service Not Listed?

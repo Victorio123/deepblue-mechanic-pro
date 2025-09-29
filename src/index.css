@@ -4,11 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CRMMB Design System - Deep Blue Automotive Theme */
+/* Ade Automobile Design System - Deep Blue Automotive Theme */
 
 @layer base {
   :root {
-    /* CRMMB Brand Colors - Deep Blue Theme */
+    /* Ade Automobile Brand Colors - Deep Blue Theme */
     --background: 0 0% 100%;
     --foreground: 210 20% 15%;
 

@@ -2,15 +2,15 @@ import { Phone, Mail, Star, Award, Clock, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Layout from '@/components/Layout';
-import heroImage from '@/assets/hero-mechanic-black.jpg';
-import carServicingImage from '@/assets/car-servicing-black.jpg';
+import heroImage from '@/assets/hero-mechanic-realistic.jpg';
+import carServicingImage from '@/assets/car-servicing-realistic.jpg';
 
 const About = () => {
   return (
     <Layout>
-      <div className="min-h-screen">
+      <div className="min-h-screen animate-fade-in">
         {/* Hero Section */}
-        <section className="relative py-24 bg-hero-gradient overflow-hidden">
+        <section className="relative py-24 bg-hero-gradient overflow-hidden animate-fade-in">
           <div className="absolute inset-0">
             <img 
               src={heroImage} 
@@ -24,7 +24,7 @@ const About = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 font-dm-sans">
-                Car Repair Mobile Mechanic Birmingham
+                Ade Automobile
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed">
                 Top rated independent garage
@@ -34,20 +34,20 @@ const About = () => {
         </section>
 
         {/* Main Content */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background animate-fade-in">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="prose prose-lg max-w-none mb-12">
                 <p className="text-xl text-foreground leading-relaxed mb-6">
-                  Car Repair Mobile Mechanic Birmingham is one of the highest rated independent garages in Birmingham. Book online for an MOT, service or repair now!
+                  Ade Automobile is one of the highest rated independent garages in Birmingham. Book online for an MOT, service or repair now!
                 </p>
                 <p className="text-xl text-foreground leading-relaxed mb-8">
-                  Car Repair Mobile Mechanic Birmingham offers convenient and efficient automotive services right at your doorstep.
+                  Ade Automobile offers convenient and efficient automotive services right at your doorstep.
                 </p>
               </div>
 
               {/* Features Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 animate-fade-in">
                 <Card className="text-center shadow-card hover:shadow-card-hover transition-all duration-300">
                   <CardContent className="p-6">
                     <Award className="w-12 h-12 text-primary mx-auto mb-4" />

@@ -10,12 +10,12 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-8 h-8 bg-primary-foreground rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold">C</span>
+                <span className="text-primary font-bold">AD</span>
               </div>
-              <span className="text-xl font-bold font-dm-sans">CRMMB</span>
+              <span className="text-xl font-bold font-dm-sans">Ade Automobile</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Car Repair Mobile Mechanic Birmingham offers convenient and efficient automotive services right at your doorstep.
+              Ade Automobile offers convenient and efficient automotive services right at your doorstep.
             </p>
           </div>
 
@@ -77,8 +77,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-sm text-primary-foreground/60">
-            © 2024 Car Repair Mobile Mechanic Birmingham. All rights reserved.
+            <p className="text-sm text-primary-foreground/60">
+            © 2024 Ade Automobile. All rights reserved.
           </p>
         </div>
       </div>
